@@ -4,7 +4,7 @@
 #
 Name     : R-alr3
 Version  : 2.0.8
-Release  : 12
+Release  : 13
 URL      : https://cran.r-project.org/src/contrib/alr3_2.0.8.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/alr3_2.0.8.tar.gz
 Summary  : Data to Accompany Applied Linear Regression 3rd Edition
