@@ -4,7 +4,7 @@
 #
 Name     : R-alr3
 Version  : 2.0.8
-Release  : 15
+Release  : 16
 URL      : https://cran.r-project.org/src/contrib/alr3_2.0.8.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/alr3_2.0.8.tar.gz
 Summary  : Data to Accompany Applied Linear Regression 3rd Edition
@@ -13,6 +13,7 @@ License  : GPL-2.0+
 Requires: R-car
 BuildRequires : R-car
 BuildRequires : buildreq-R
+BuildRequires : util-linux
 
 %description
 'Applied Linear Regression,' 3rd edition, Wiley are presented.  
@@ -29,10 +30,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1569381717
+export SOURCE_DATE_EPOCH=1571795054
 
 %install
-export SOURCE_DATE_EPOCH=1569381717
+export SOURCE_DATE_EPOCH=1571795054
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
