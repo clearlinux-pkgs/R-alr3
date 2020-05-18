@@ -4,7 +4,7 @@
 #
 Name     : R-alr3
 Version  : 2.0.8
-Release  : 19
+Release  : 20
 URL      : https://cran.r-project.org/src/contrib/alr3_2.0.8.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/alr3_2.0.8.tar.gz
 Summary  : Data to Accompany Applied Linear Regression 3rd Edition
@@ -13,7 +13,6 @@ License  : GPL-2.0+
 Requires: R-car
 BuildRequires : R-car
 BuildRequires : buildreq-R
-BuildRequires : util-linux
 
 %description
 'Applied Linear Regression,' 3rd edition, Wiley are presented.  
@@ -24,21 +23,22 @@ BuildRequires : util-linux
 
 %prep
 %setup -q -c -n alr3
+cd %{_builddir}/alr3
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571795054
+export SOURCE_DATE_EPOCH=1589776054
 
 %install
-export SOURCE_DATE_EPOCH=1571795054
+export SOURCE_DATE_EPOCH=1589776054
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
